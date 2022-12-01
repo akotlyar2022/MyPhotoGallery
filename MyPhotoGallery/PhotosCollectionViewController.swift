@@ -4,11 +4,12 @@
 //
 //  Created by macbook on 30.11.22.
 //
-
 import UIKit
 
 
 class PhotosCollectionViewController: UICollectionViewController {
+    
+    let photos = ["car0", "car1", "car3", "car4", "car5", "car6", "car7", "car8", "car9", "car10", "car11", "car12", "car13", "car14", "car15", "car16", "car17", "car18", "car19", "car20", "car21", "car22", "car23", "car24", "car25", "car26", "car27", "car28", "car29"]
     
     let itemsPerRow: CGFloat = 2
     let sectionInserts = UIEdgeInsets(top: 20, left: 20, bottom: 20, right: 20)
@@ -36,13 +37,15 @@ class PhotosCollectionViewController: UICollectionViewController {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 20
+        return photos.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "photoCell", for: indexPath) as! PhotosCollectionViewCell
         
-        cell.backgroundColor = .gray
+        let imageName = photos[indexPath.item]
+        let image = UIImage(named: imageName)
+        cell.carImageView.image = image
         
         return cell
     }
