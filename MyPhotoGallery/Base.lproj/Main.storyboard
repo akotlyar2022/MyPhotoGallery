@@ -3,6 +3,7 @@
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -43,6 +44,7 @@
                                 </collectionViewCellContentView>
                                 <connections>
                                     <outlet property="carImageView" destination="L3W-0N-yvC" id="FeB-VG-aF6"/>
+                                    <segue destination="9Du-x9-a5i" kind="presentation" identifier="pickPhotoSegue" id="ic4-P9-3AL"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -56,6 +58,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="All-7x-9Ez" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="730.53435114503816" y="-82.394366197183103"/>
+        </scene>
+        <!--Photo View Controller-->
+        <scene sceneID="cZ1-cF-XEL">
+            <objects>
+                <viewController id="9Du-x9-a5i" customClass="PhotoViewController" customModule="MyPhotoGallery" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GuY-d1-Pza">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="783"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Ka-rK-vtM">
+                                <rect key="frame" x="0.0" y="237" width="393" height="309"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="309" id="TCS-5n-7iw"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcN-42-D2r">
+                                <rect key="frame" x="74.666666666666686" y="692" width="244" height="55"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="square.and.arrow.up" catalog="system" title="  Tap to Share">
+                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle0"/>
+                                    <color key="baseForegroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="shareAction:" destination="9Du-x9-a5i" eventType="touchUpInside" id="8n3-BM-e2D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="VBG-5E-Bdc"/>
+                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                        <constraints>
+                            <constraint firstItem="VBG-5E-Bdc" firstAttribute="trailing" secondItem="9Ka-rK-vtM" secondAttribute="trailing" id="9zI-Nr-gyi"/>
+                            <constraint firstItem="VBG-5E-Bdc" firstAttribute="bottom" secondItem="mcN-42-D2r" secondAttribute="bottom" constant="36" id="HuT-bY-IFW"/>
+                            <constraint firstItem="9Ka-rK-vtM" firstAttribute="leading" secondItem="VBG-5E-Bdc" secondAttribute="leading" id="JQX-Ne-2kH"/>
+                            <constraint firstItem="9Ka-rK-vtM" firstAttribute="centerY" secondItem="GuY-d1-Pza" secondAttribute="centerY" id="ktO-wQ-pDV"/>
+                            <constraint firstItem="mcN-42-D2r" firstAttribute="centerX" secondItem="GuY-d1-Pza" secondAttribute="centerX" id="xgM-1B-niQ"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="photoImageView" destination="9Ka-rK-vtM" id="RQz-z8-kT5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ofY-HI-UIY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472.5190839694656" y="-82.394366197183103"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dSV-hE-zz2">
@@ -77,8 +123,15 @@
         </scene>
     </scenes>
     <resources>
+        <image name="square.and.arrow.up" catalog="system" width="115" height="128"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

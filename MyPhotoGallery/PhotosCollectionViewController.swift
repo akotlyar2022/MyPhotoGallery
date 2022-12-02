@@ -27,6 +27,14 @@ class PhotosCollectionViewController: UICollectionViewController {
 //        collectionView.showsHorizontalScrollIndicator = false
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "pickPhotoSegue" {
+            let photoVC = segue.destination as! PhotoViewController
+            let cell = sender as! PhotosCollectionViewCell
+            photoVC.image = cell.carImageView.image
+        }
+    }
+    
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {

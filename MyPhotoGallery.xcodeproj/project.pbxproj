@@ -14,6 +14,7 @@
 		FA9947A8293795E500279807 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA9947A6293795E500279807 /* LaunchScreen.storyboard */; };
 		FA9947B02937986C00279807 /* PhotosCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9947AF2937986C00279807 /* PhotosCollectionViewController.swift */; };
 		FA9947B229379F1A00279807 /* PhotosCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9947B129379F1A00279807 /* PhotosCollectionViewCell.swift */; };
+		FADC4380293A9849003CA8FF /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FADC437F293A9849003CA8FF /* PhotoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		FA9947A9293795E500279807 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		FA9947AF2937986C00279807 /* PhotosCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewController.swift; sourceTree = "<group>"; };
 		FA9947B129379F1A00279807 /* PhotosCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotosCollectionViewCell.swift; sourceTree = "<group>"; };
+		FADC437F293A9849003CA8FF /* PhotoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				FA99479D293795DF00279807 /* SceneDelegate.swift */,
 				FA9947AF2937986C00279807 /* PhotosCollectionViewController.swift */,
 				FA9947B129379F1A00279807 /* PhotosCollectionViewCell.swift */,
+				FADC437F293A9849003CA8FF /* PhotoViewController.swift */,
 				FA9947A1293795DF00279807 /* Main.storyboard */,
 				FA9947A4293795E500279807 /* Assets.xcassets */,
 				FA9947A6293795E500279807 /* LaunchScreen.storyboard */,
@@ -145,6 +148,7 @@
 				FA9947B229379F1A00279807 /* PhotosCollectionViewCell.swift in Sources */,
 				FA99479E293795DF00279807 /* SceneDelegate.swift in Sources */,
 				FA9947B02937986C00279807 /* PhotosCollectionViewController.swift in Sources */,
+				FADC4380293A9849003CA8FF /* PhotoViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
